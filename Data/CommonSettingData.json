@@ -8,20 +8,5 @@
             "avatar": "1",
             "company ": "2"
         }
-    },
-	"ApplicationA": {
-        "Name": "A",
-        "DataA1": "1",
-        "DataA2": "2"
-    },
-    "ApplicationB": {
-        "Name": "B",
-        "DataB1": "1",
-        "DataB2": "2"
-    },
-    "ApplicationC": {
-        "Name": "C",
-        "DataC1": "1",
-        "DataC2": "2"
     }
 }
