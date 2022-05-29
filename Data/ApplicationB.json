@@ -2,17 +2,20 @@
     "ApplicationB": 
     {
         "Name": "B",
-        "DataB1": "1",
-        "DataB2": "2",
-        "DataB3": "3",
-        "DataB4": "4",
-        "DataList": 
-        {
-            "Name": "B",
-            "DataB1": "1",
-            "DataB2": "2",
-            "DataB3": "3",
-            "DataB4": "4"
-        }
+        "Date and Time": "1",
+        "TimeZone": "2",
+        "Currency": "3",
+        "Address": "4",
+        "Name": "B",
+        "Date and Time": "1",
+        "TimeZone": "2",
+        "Currency": "3",
+        "Address": "4",
+        "Name": "B",
+        "Date and Time": "1",
+        "TimeZone": "2",
+        "Currency": "3",
+        "Address": "4",
+       
     }
 }

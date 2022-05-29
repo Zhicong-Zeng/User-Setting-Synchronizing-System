@@ -5,8 +5,11 @@ from flask import Flask , render_template , json , request
 import os
 
 
+
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
+
+print("Hello WOr!")
 
 @app.route("/")
 def root():
@@ -47,4 +50,19 @@ def ApplicationC():
     with open(AppC_file_path) as file:
       DataList.append(json.load(file))
     return render_template('ApplicationC.html', title="page", jsonfile=json.dumps(DataList))
+
+@app.route('/common_get',methods = ['GET'])
+def common_get():
+  file_path = os.path.relpath("Data/CommonSettingData.json")
+  with open(file_path) as file:
+    commons = json.load(file)
+  return render_template('common.html', title="page", jsonfile=json.dumps(commons))
+
+
+@app.route('/common_post',methods = ['POST'])
+def common_post():
+  if request.method == 'POST':
+    file = request.files['json'] 
+    file_path = os.path.relpath("Data/CommonSettingData.json")
+    file.save(file_path)
 
