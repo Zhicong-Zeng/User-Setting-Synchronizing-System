@@ -1,0 +1,12 @@
+{    
+    "CommonSettingData": {
+        "date and time": "444",
+        "timezone": "22222",
+        "currency": "222",
+        "user information": {
+            "name": "A",
+            "avatar": "1",
+            "company ": "2"
+        }
+    }
+}

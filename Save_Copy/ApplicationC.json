@@ -1,0 +1,60 @@
+{
+    "ApplicationC": {
+        "Name": "C",
+        "DataC1": "1",
+        "DataC2": "2"
+    },
+    "table layouts":{
+        "Data1":
+        [
+            "/* Keyword values */ ",
+            "table-layout: auto; ", 
+            "table-layout: fixed; ",
+        
+            "/* Global values */",
+            "table-layout: inherit;",
+            "table-layout: initial;",
+            "table-layout: revert;",
+            "table-layout: revert-layer;",
+            "table-layout: unset;"
+        ]
+    },
+    "personal query definitions":{
+        "Data1" : "Select * from foo",
+        "Data2" : "Select * from foo where foo as fool"
+    },
+    "report schedules":{
+        "Data1" :         
+        [
+            "Report to schedule: BPDetail_ByState.",
+            "This report provides the states of each business process running in Sterling B2B Integrator.",
+            "Format: HTML",
+            "E-mail Address:",
+            "Subject: Report 1",
+            "E-mail Address: yourname@yourcompany.com",
+            "E-mail Host: your e-mail host server name",
+            "E-mail Port: your e-mail port number",
+            "Schedule Type: Daily",
+
+            "Schedule Time: 9:00 a.m.",
+
+            "Date Exclusions: 1 - January"
+        ],
+        "Data2" :         
+        [
+            "Report to schedule: BPDetail_ByState.",
+            "This report provides the states of each business process running in Sterling B2B Integrator.",
+            "Format: HTML",
+            "E-mail Address:",
+            "Subject: Report 1",
+            "E-mail Address: yourname@yourcompany.com",
+            "E-mail Host: your e-mail host server name",
+            "E-mail Port: your e-mail port number",
+            "Schedule Type: Daily",
+
+            "Schedule Time: 9:00 a.m.",
+
+            "Date Exclusions: 1 - January"
+        ]
+    }
+}

@@ -1,12 +1,1 @@
-{
-    "CommonSettingData": {
-        "date and time": "11111",
-        "timezone": "22222",
-        "currency": "33333",
-        "user information": {
-            "name": "A",
-            "avatar": "1",
-            "company ": "2"
-        }
-    }
-}
+{"currency": "1", "date and time": "111", "timezone": "1", "user information": {"avatar": "1", "company ": "2", "name": "A"}}
