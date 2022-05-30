@@ -1,18 +1,1 @@
-{
-    "ApplicationB": 
-    {
-        "Name": "B",
-        "DataB1": "1",
-        "DataB2": "2",
-        "DataB3": "3",
-        "DataB4": "4",
-        "DataList": 
-        {
-            "Name": "B",
-            "DataB1": "1",
-            "DataB2": "2",
-            "DataB3": "3",
-            "DataB4": "4"
-        }
-    }
-}
+{"Address": "4", "Currency": "3", "Date and Time": "1", "Name": "B", "TimeZone": "2"}
