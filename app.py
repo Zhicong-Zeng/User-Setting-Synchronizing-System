@@ -1,15 +1,9 @@
-#from asyncio.windows_events import NULL
-from email import message
-from webbrowser import get
 from flask import Flask , render_template , json , request
 import os
 
 
-
 app = Flask(__name__)
-app.config['TEMPLATES_AUTO_RELOAD'] = True
 
-print("Hello WOr!")
 
 @app.route("/")
 def root():
@@ -26,10 +20,16 @@ def ApplicationC():
     
     if(json_obj.get("CommonSettingData")):
       common_setting_data = json_obj["CommonSettingData"]
-      file_path = os.path.relpath("Data/CommonSettingData.json")
-      with open(file_path, 'w') as outfile:
-        json.dump(common_setting_data, outfile)
-      message += "Succeed change common data"
+      if(common_setting_data.get("ApplicationC")):
+        AppC_data = common_setting_data["ApplicationC"]
+      
+        file_path = os.path.relpath("Data/CommonSettingData.json")
+        with open(file_path, 'r') as targetfile:
+          data = json.load(targetfile)
+        data["CommonSettingData"]["ApplicationC"] = AppC_data
+        with open(file_path, 'w') as targetfile:
+          json.dump(data, targetfile)
+        message += "Succeed change common data"
         
     if(json_obj.get("ApplicationC")):
       application_c = json_obj["ApplicationC"]
@@ -43,9 +43,16 @@ def ApplicationC():
   
   else:#Get method
     DataList.clear()
+
     Common_file_path = os.path.relpath("Data/CommonSettingData.json")
     with open(Common_file_path) as file:
-      DataList.append(json.load(file))
+      AllData = json.loads(file.read())
+      if(AllData.get("CommonSettingData")):
+        CommonData = AllData["CommonSettingData"]
+        if(CommonData.get("ApplicationC")):
+          AppC_Data = CommonData["ApplicationC"]
+          DataList.append(AppC_Data)
+
     AppC_file_path = os.path.relpath("Data/ApplicationC.json")
     with open(AppC_file_path) as file:
       DataList.append(json.load(file))

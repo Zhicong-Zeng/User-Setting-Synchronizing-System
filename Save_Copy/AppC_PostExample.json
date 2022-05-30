@@ -1,0 +1,92 @@
+{
+    "CommonSettingData": {
+        "ApplicationA":
+        {
+            "date and time": "11",
+            "timezone": "11",
+            "currency": "11",
+            "user information": {
+                "name": "A",
+                "avatar": "A",
+                "company ": "A"
+            }
+        },
+        "ApplicationB":
+        {
+            "date and time": "222",
+            "timezone": "22222",
+            "currency": "222",
+            "user information": {
+                "name": "B",
+                "avatar": "B",
+                "company ": "B"
+            }
+        },
+        "ApplicationC":
+        {
+            "date and time": "444",
+            "timezone": "444",
+            "currency": "444",
+            "user information": {
+                "name": "C",
+                "avatar": "C",
+                "company ": "C"
+            }
+        }
+    },
+    "ApplicationC" :{
+        "table layouts":{
+            "Data1":
+            [
+                "/* Keyword values */ ",
+                "table-layout: auto; ", 
+                "table-layout: fixed; ",
+        
+                "/* Global values */",
+                "table-layout: inherit;",
+                "table-layout: initial;",
+                "table-layout: revert;",
+                "table-layout: revert-layer;",
+                "table-layout: unset;"
+            ]
+        },
+        "personal query definitions":{
+            "Data1" : "Select * from foo",
+            "Data2" : "Select * from foo where foo as fool"
+        },
+        "report schedules":{
+            "Data1" :         
+            [
+                "Report to schedule: BPDetail_ByState.",
+                "This report provides the states of each business process running in Sterling B2B Integrator.",
+                "Format: HTML",
+                "E-mail Address:",
+                "Subject: Report 1",
+                "E-mail Address: yourname@yourcompany.com",
+                "E-mail Host: your e-mail host server name",
+                "E-mail Port: your e-mail port number",
+                "Schedule Type: Daily",
+
+                "Schedule Time: 9:00 a.m.",
+
+                "Date Exclusions: 1 - January"
+            ],
+            "Data2" :         
+            [
+                "Report to schedule: BPDetail_ByState.",
+                "This report provides the states of each business process running in Sterling B2B Integrator.",
+                "Format: HTML",
+                "E-mail Address:",
+                "Subject: Report 1",
+                "E-mail Address: yourname@yourcompany.com",
+                "E-mail Host: your e-mail host server name",
+                "E-mail Port: your e-mail port number",
+                "Schedule Type: Daily",
+
+                "Schedule Time: 9:00 a.m.",
+
+                "Date Exclusions: 1 - January"
+            ]
+        }
+    }
+}

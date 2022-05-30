@@ -1,12 +1,37 @@
 {    
     "CommonSettingData": {
-        "date and time": "444",
-        "timezone": "22222",
-        "currency": "222",
-        "user information": {
-            "name": "A",
-            "avatar": "1",
-            "company ": "2"
+        "ApplicationA":
+        {
+            "date and time": "11",
+            "timezone": "11",
+            "currency": "11",
+            "user information": {
+                "name": "A",
+                "avatar": "A",
+                "company ": "A"
+            }
+        },
+        "ApplicationB":
+        {
+            "date and time": "222",
+            "timezone": "22222",
+            "currency": "222",
+            "user information": {
+                "name": "B",
+                "avatar": "B",
+                "company ": "B"
+            }
+        },
+        "ApplicationC":
+        {
+            "date and time": "333",
+            "timezone": "333",
+            "currency": "33",
+            "user information": {
+                "name": "C",
+                "avatar": "C",
+                "company ": "C"
+            }
         }
     }
 }

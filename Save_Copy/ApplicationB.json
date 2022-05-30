@@ -1,1 +1,21 @@
-{"Address": "4", "Currency": "3", "Date and Time": "1", "Name": "B", "TimeZone": "2"}
+{
+    "ApplicationB": 
+    {
+        "Name": "B",
+        "Date and Time": "1",
+        "TimeZone": "2",
+        "Currency": "3",
+        "Address": "4",
+        "Name": "B",
+        "Date and Time": "1",
+        "TimeZone": "2",
+        "Currency": "3",
+        "Address": "4",
+        "Name": "B",
+        "Date and Time": "1",
+        "TimeZone": "2",
+        "Currency": "3",
+        "Address": "4"
+       
+    }
+}
