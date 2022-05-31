@@ -1,19 +1,80 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
+      <link rel="stylesheet" type="text/css" href="../static/style.css">
   </head>
-  <body>
-    <div class="container"></div>
-    <script>
-      const jsonfile = JSON.parse({{jsonfile|tojson}});
-      console.log(jsonfile);
-      document.querySelector(".container").innerHTML = JSON.stringify(jsonfile, null, 2);
-    </script>
-    <form action = "http://127.0.0.1:5000/ApplicationA" method = "POST" 
-    enctype = "multipart/form-data">
-    <input type = "file" name = "file" />
-    <input type = "submit"/>
-    </form>   
+  <body scroll="yes">
+    <form action = "http://127.0.0.1:5000/ApplicationA" method = "POST"
+        enctype = "multipart/form-data">
+
+
+          <div class="container">
+              <div class="brand-logo"></div>
+              <div class="brand-title">Application A</div>
+              <div class="inputs">
+                  <input type = "file" name = "file" />
+                    <button type="submit">Submit</button>
+
+                    <label>Name</label> <input type="text" id="NameId" disabled/>
+
+                    <label>Avatar</label>
+                    <input type="text" id="AvatarId"  disabled/>
+
+                    <label>Date and Time</label>
+                    <input type="text" id="DTId"  disabled/>
+
+                    <label>Timezone</label>
+                    <input type="text" id="TimeZoneId"  disabled/>
+
+                    <label>Email Id</label>
+                    <input type="text" id="EmailId" disabled />
+
+                    <label>Company</label>
+                    <input type="text" id="CompanyId"  disabled/>
+
+                    <label>Currency</label>
+                    <input type="text" id="CurrencyId"  disabled/>
+
+                    <label>Address</label>
+                    <input type="text" id="AddressId"  disabled/>
+
+                    <label>Language</label>
+                    <input type="text" id="LanguageId" disabled />
+
+                    <label>Role</label>
+                    <input type="text" id="RoleId"  disabled/>
+
+                    <label>Currency</label>
+                    <input type="text" id="CurrencyId"  disabled/>
+
+                    <label>Cellphone</label>
+                    <input type="text" id="CellphoneId"  disabled/>
+
+                    <label>OfficePhoneNumberId</label>
+                    <input type="text" id="OfficePhoneNumberId"  disabled/>
+
+                    <button type="submit">Refresh</button>
+              </div>
+          </div>
+    </form>
   </body>
+<script>
+          const jsonfile = JSON.parse({{jsonfile|tojson}});
+          setValue(jsonfile);
+
+          function setValue(value) {
+              document.getElementById("NameId").value = value[0].PreferredName;
+              document.getElementById("AvatarId").value = value[0].PreferredName;
+              document.getElementById("TimeZoneId").value = value[0].Zone;
+              document.getElementById("CompanyId").value = value[0].Workplace;
+              document.getElementById("CurrencyId").value = value[0].Currency;
+              document.getElementById("DTId").value = value[0].PreferredTime;
+              document.getElementById("AddressId").value = value[0].Address;
+              document.getElementById("EmailId").value = value[0].Email;
+              document.getElementById("LanguageId").value = value[0].Language;
+              document.getElementById("RoleId").value = value[0].Role;
+              document.getElementById("CellNoId").value = value[0].CellNo;
+              document.getElementById("OfficePhoneNumberId").value = value[0].OfficePhoneNumber;
+          }
+    </script>
 </html>

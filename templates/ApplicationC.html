@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
+
   </head>
   <body>
     <div class="container"></div>
@@ -10,10 +10,10 @@
       console.log(jsonfile);
       document.querySelector(".container").innerHTML = JSON.stringify(jsonfile, null, 2);
     </script>
-    <form action = "http://127.0.0.1:5000/ApplicationC" method = "POST" 
+    <form action = "http://127.0.0.1:5000/ApplicationC" method = "POST"
     enctype = "multipart/form-data">
     <input type = "file" name = "file" />
     <input type = "submit"/>
-    </form>   
+    </form>
   </body>
 </html>

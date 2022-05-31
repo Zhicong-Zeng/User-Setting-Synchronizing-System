@@ -6,21 +6,21 @@ input {
 
 body {
   margin: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #ecf0f3;
+  width: auto;
+  height: auto;
   display: flex;
+  background: #ecf0f3;
   align-items: center;
   text-align: center;
   justify-content: center;
   place-items: center;
-  overflow: hidden;
   font-family: poppins;
 }
 
 .container {
+  display: block;
   position: relative;
-  width: 350px;
+  width: 500px;
   height: auto;
   border-radius: 20px;
   padding: 40px;
