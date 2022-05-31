@@ -17,21 +17,19 @@
                   <input type = "file" name = "file" />
                     <button type="submit">Submit</button>
 
-                    <label>Name</label> <input type="text" id="NameId" disabled/>
+                    <label>OtherName</label>
+                    <input type="text" id="NameId" disabled/>
 
-                    <label>Avatar</label>
-                    <input type="text" id="AvatarId"  disabled/>
-
-                    <label>Date and Time</label>
+                    <label>Date Time</label>
                     <input type="text" id="DTId"  disabled/>
 
-                    <label>Timezone</label>
+                    <label>Time Zone</label>
                     <input type="text" id="TimeZoneId"  disabled/>
 
-                    <label>Email Id</label>
+                    <label>Email ID</label>
                     <input type="text" id="EmailId" disabled />
 
-                    <label>Company</label>
+                    <label>Work Place</label>
                     <input type="text" id="CompanyId"  disabled/>
 
                     <label>Currency</label>
@@ -46,19 +44,19 @@
                     <label>Role</label>
                     <input type="text" id="RoleId"  disabled/>
 
-                    <label>Cellphone</label>
+                    <label>Cell Phone Number</label>
                     <input type="text" id="CellNoId"  disabled/>
 
-                    <label>OfficePhoneNumberId</label>
+                    <label>Office Number</label>
                     <input type="text" id="OfficePhoneNumberId"  disabled/>
 
-                    <label>Personal query definitions</label>
+                    <label>personal Query Definitions</label>
                     <input type="text" id="personalquerydefinitionsId"  disabled/>
 
-                  <label>Report schedules</label>
+                    <label>Report Schedules</label>
                     <input type="text" id="reportschedulesid"  disabled/>
 
-                  <label>Table layout setting</label>
+                    <label>Table Layouts</label>
                     <input type="text" id="tablelayoutsid"  disabled/>
 
                   <button type=button onClick="parent.location='http://127.0.0.1:5000/ApplicationC'">Refresh</button>
@@ -73,9 +71,6 @@
           console.log(value)
           if(value[0].OtherName){
             document.getElementById("NameId").value = value[0].OtherName;
-          }
-          if(value[0].OtherName){
-            document.getElementById("AvatarId").value = value[0].OtherName;
           }
           if(value[0].TimeZone){
            document.getElementById("TimeZoneId").value = value[0].TimeZone;

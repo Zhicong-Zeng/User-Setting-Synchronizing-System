@@ -18,18 +18,18 @@
                   <input type = "file" name = "file" />
                     <button type="submit">Submit</button>
 
-                    <label>Name</label> <input type="text" id="NameId" disabled/>
+                    <label>Preferred Name</label> <input type="text" id="NameId" disabled/>
 
-                    <label>Date and Time</label>
+                    <label>Preferred Time</label>
                     <input type="text" id="DTId"  disabled/>
 
-                    <label>Timezone</label>
+                    <label>Zone</label>
                     <input type="text" id="TimeZoneId"  disabled/>
 
-                    <label>Email Id</label>
+                    <label>Email</label>
                     <input type="text" id="EmailId" disabled />
 
-                    <label>Company</label>
+                    <label>Work Place</label>
                     <input type="text" id="CompanyId"  disabled/>
 
                     <label>Address</label>
@@ -44,25 +44,25 @@
                     <label>Currency</label>
                     <input type="text" id="CurrencyId"  disabled/>
 
-                    <label>Cellphone</label>
+                    <label>Cell No</label>
                     <input type="text" id="CellNoId"  disabled/>
 
-                    <label>OfficePhoneNumberId</label>
+                    <label>Office Phone Number</label>
                     <input type="text" id="OfficePhoneNumberId"  disabled/>
 
-                  <label>WorkStatus</label>
+                    <label>Work Status</label>
                     <input type="text" id="WorkStatusId"  disabled/>
 
-                    <label>DirectReportees</label>
+                    <label>Direct Reportees</label>
                     <input type="text" id="DirectReporteesId"  disabled/>
 
-                    <label>AppearanceSettings</label>
+                    <label>Appearance Settings</label>
                     <input type="text" id="AppearanceSettingsId" disabled />
 
-                    <label>UserID</label>
+                    <label>User ID</label>
                     <input type="text" id="UserID"  disabled/>
 
-                    <label>EmployeeID</label>
+                    <label>Employee ID</label>
                     <input type="text" id="EmployeeID"  disabled/>
 
                      <button type=button onClick="parent.location='http://127.0.0.1:5000/ApplicationB'">Refresh</button>
@@ -119,9 +119,6 @@
            }
             if(value[0].WorkStatus){
             document.getElementById("WorkStatusId").value = value[0].WorkStatus;
-           }
-            if(value[0].DirectReportees){
-            document.getElementById("DirectReporteesId").value = value[0].DirectReportees;
            }
             if(value[0].UserID){
             document.getElementById("UserID").value = value[0].UserID;
