@@ -4,9 +4,9 @@
 	"Currency": ["Currency", "Currency", "Currency"],
 	"TimeZone": ["TimeZone", "Zone", "TimeZone"],
 	"Company": ["Company", "Workplace","Workplace"],
-	"Cellphone Number": ["CellPhone Number", "CellNo.","Cell Phone Number"],
-	"Office Number": ["Office Number", "Office Phone Number", "Office Number"],
+	"Cellphone Number": ["CellPhoneNumber", "CellNo","CellPhoneNumber"],
+	"Office Number": ["OfficeNumber", "OfficePhoneNumber", "OfficeNumber"],
 	"Address": ["Address", "Address", "Address"],
-	"Email id": ["Email Id", "Email", "EmailID"], 
+	"Email id": ["EmailId", "Email", "EmailID"], 
 	"Language": ["Language","Language","Language"]
 }

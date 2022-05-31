@@ -16,10 +16,10 @@
 
                     <label>Name</label> <input type="text" id="NameId" disabled/>
 
-                    <label>Date and Time</label>
+                    <label>Date</label>
                     <input type="text" id="DTId"  disabled/>
 
-                    <label>Timezone</label>
+                    <label>TimeZone</label>
                     <input type="text" id="TimeZoneId"  disabled/>
 
                     <label>Email Id</label>
@@ -40,25 +40,25 @@
                     <label>Role</label>
                     <input type="text" id="RoleId"  disabled/>
 
-                    <label>Cellphone</label>
+                    <label>Cell Phone Number</label>
                     <input type="text" id="CellNoId"  disabled/>
 
-                    <label>OfficePhoneNumber</label>
+                    <label>Office Number</label>
                     <input type="text" id="OfficePhoneNumberId"  disabled/>
 
-                    <label>WorkStatus</label>
+                    <label>Work Status</label>
                     <input type="text" id="WorkStatusId"  disabled/>
 
-                    <label>DirectReportees</label>
+                    <label>Direct Reportees</label>
                     <input type="text" id="DirectReporteesId"  disabled/>
 
-                    <label>AppearanceSettings</label>
+                    <label>Appearance Settings</label>
                     <input type="text" id="AppearanceSettingsId" disabled />
 
-                    <label>UserID</label>
+                    <label>User ID</label>
                     <input type="text" id="UserID"  disabled/>
 
-                    <label>EmployeeID</label>
+                    <label>Employee ID</label>
                     <input type="text" id="EmployeeID"  disabled/>
 
                   <button type=button onClick="parent.location='http://127.0.0.1:5000/ApplicationA'">Refresh</button>
@@ -71,26 +71,26 @@
           setValue(jsonfile);
 
           function setValue(value) {
-          if(value[0].PreferredName){
-            document.getElementById("NameId").value = value[0].PreferredName;
+          if(value[0].Name){
+            document.getElementById("NameId").value = value[0].Name;
           }
-          if(value[0].Zone){
-           document.getElementById("TimeZoneId").value = value[0].Zone;
+          if(value[0].TimeZone){
+           document.getElementById("TimeZoneId").value = value[0].TimeZone;
           }
-          if(value[0].Workplace){
-            document.getElementById("CompanyId").value = value[0].Workplace;
+          if(value[0].Company){
+            document.getElementById("CompanyId").value = value[0].Company;
           }
           if(value[0].Currency){
             document.getElementById("CurrencyId").value = value[0].Currency;
           }
-          if(value[0].PreferredTime){
-             document.getElementById("DTId").value = value[0].PreferredTime;
+          if(value[0].Date){
+             document.getElementById("DTId").value = value[0].Date;
           }
           if(value[0].Address){
            document.getElementById("AddressId").value = value[0].Address;
           }
-          if(value[0].Email){
-           document.getElementById("EmailId").value = value[0].Email;
+          if(value[0].EmailId){
+           document.getElementById("EmailId").value = value[0].EmailId;
           }
           if(value[0].Language){
             document.getElementById("LanguageId").value = value[0].Language;
@@ -98,11 +98,11 @@
           if(value[0].Role){
            document.getElementById("RoleId").value = value[0].Role;
           }
-          if(value[0].CellNo){
-           document.getElementById("CellNoId").value = value[0].CellNo;
+          if(value[0].CellPhoneNumber){
+           document.getElementById("CellNoId").value = value[0].CellPhoneNumber;
           }
-          if(value[0].OfficePhoneNumber){
-            document.getElementById("OfficePhoneNumberId").value = value[0].OfficePhoneNumber;
+          if(value[0].OfficeNumber){
+            document.getElementById("OfficePhoneNumberId").value = value[0].OfficeNumber;
           }
           if(value[0].AppearanceSettings){
             document.getElementById("AppearanceSettingsId").value = value[0].AppearanceSettings;
@@ -112,9 +112,6 @@
            }
             if(value[0].WorkStatus){
             document.getElementById("WorkStatusId").value = value[0].WorkStatus;
-           }
-            if(value[0].DirectReportees){
-            document.getElementById("DirectReporteesId").value = value[0].DirectReportees;
            }
             if(value[0].UserID){
             document.getElementById("UserID").value = value[0].UserID;
