@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <div class="container"></div>
+    <script>
+      const jsonfile = JSON.parse({{jsonfile|tojson}});
+      console.log(jsonfile);
+      document.querySelector(".container").innerHTML = JSON.stringify(jsonfile, null, 2);
+    </script>
+    <form action = "http://127.0.0.1:5000/ApplicationA" method = "POST" 
+    enctype = "multipart/form-data">
+    <input type = "file" name = "file" />
+    <input type = "submit"/>
+    </form>   
+  </body>
+</html>
