@@ -16,7 +16,7 @@
 		"Zone": "TimeZone",
 		"Address": "Address",
 		"Email": "Email id",
-		"Office Phone Number": "Office Number",
+		"OfficePhoneNumber": "Office Number",
 		"Currency": "Currency",
 		"PreferredTime": "Date and Time",
 		"CellNo.": "Cellphone Number",

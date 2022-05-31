@@ -44,10 +44,19 @@
                     <input type="text" id="RoleId"  disabled/>
 
                     <label>Cellphone</label>
-                    <input type="text" id="CellphoneId"  disabled/>
+                    <input type="text" id="CellNoId"  disabled/>
 
                     <label>OfficePhoneNumberId</label>
                     <input type="text" id="OfficePhoneNumberId"  disabled/>
+
+                    <label>Personal query definitions</label>
+                    <input type="text" id="personalquerydefinitionsId"  disabled/>
+
+                  <label>Report schedules</label>
+                    <input type="text" id="reportschedulesid"  disabled/>
+
+                  <label>Table layout setting</label>
+                    <input type="text" id="tablelayoutsid"  disabled/>
 
                   <button type=button onClick="parent.location='http://127.0.0.1:5000/ApplicationC'">Refresh</button>
                </div>
@@ -57,8 +66,8 @@
 <script>
           const jsonfile = JSON.parse({{jsonfile|tojson}});
           setValue(jsonfile);
-
           function setValue(value) {
+          console.log(value)
           if(value[0].OtherName){
             document.getElementById("NameId").value = value[0].OtherName;
           }
@@ -89,12 +98,24 @@
           if(value[0].Role){
            document.getElementById("RoleId").value = value[0].Role;
           }
-          if(value[0].Cell_Phone_Number){
-           document.getElementById("CellNoId").value = value[0].Cell_Phone_Number;
+          if(value[0].CellPhoneNumber){
+           document.getElementById("CellNoId").value = value[0].CellPhoneNumber;
           }
-          if(value[0].Office_Number){
+          if(value[0].OfficeNumber){
             document.getElementById("OfficePhoneNumberId").value = value[0].OfficeNumber;
           }
+          //console.log(value[0].personalquerydefinitions.Data1.toString())
+              // console.log(typeof value[0].personalquerydefinitions.Data1)
+          if(value[0].personalquerydefinitions.toString()){
+            document.getElementById("personalquerydefinitionsId").value = value[0].personalquerydefinitions.Data1.toString() + ", " + value[0].personalquerydefinitions.Data2.toString();
           }
+          if(value[0].reportschedules.toString()){
+            document.getElementById("reportschedulesid").value = value[0].reportschedules.Data1.toString() + ", " + value[0].reportschedules.Data2.toString() + ", " + value[0].reportschedules.ReportTime.toString();
+          }
+          if(value[0].tablelayouts.toString()){
+            document.getElementById("tablelayoutsid").value = value[0].tablelayouts.tableborder.toString() + ", " + value[0].tablelayouts.viewonly.toString() + ", " + value[0].tablelayouts.layout.toString();
+          }
+          }
+
     </script>
 </html>

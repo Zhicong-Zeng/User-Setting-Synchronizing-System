@@ -17,9 +17,6 @@
 
                     <label>Name</label> <input type="text" id="NameId" disabled/>
 
-                    <label>Avatar</label>
-                    <input type="text" id="AvatarId"  disabled/>
-
                     <label>Date and Time</label>
                     <input type="text" id="DTId"  disabled/>
 
@@ -31,9 +28,6 @@
 
                     <label>Company</label>
                     <input type="text" id="CompanyId"  disabled/>
-
-                    <label>Currency</label>
-                    <input type="text" id="CurrencyId"  disabled/>
 
                     <label>Address</label>
                     <input type="text" id="AddressId"  disabled/>
@@ -48,10 +42,25 @@
                     <input type="text" id="CurrencyId"  disabled/>
 
                     <label>Cellphone</label>
-                    <input type="text" id="CellphoneId"  disabled/>
+                    <input type="text" id="CellNoId"  disabled/>
 
                     <label>OfficePhoneNumberId</label>
                     <input type="text" id="OfficePhoneNumberId"  disabled/>
+
+                  <label>WorkStatus</label>
+                    <input type="text" id="WorkStatusId"  disabled/>
+
+                    <label>DirectReportees</label>
+                    <input type="text" id="DirectReporteesId"  disabled/>
+
+                    <label>AppearanceSettings</label>
+                    <input type="text" id="AppearanceSettingsId" disabled />
+
+                    <label>UserID</label>
+                    <input type="text" id="UserID"  disabled/>
+
+                    <label>EmployeeID</label>
+                    <input type="text" id="EmployeeID"  disabled/>
 
                      <button type=button onClick="parent.location='http://127.0.0.1:5000/ApplicationB'">Refresh</button>
               </div>
@@ -65,9 +74,6 @@
           function setValue(value) {
            if(value[0].PreferredName){
            document.getElementById("NameId").value = value[0].PreferredName;
-           }
-            if(value[0].Avatar){
-            document.getElementById("AvatarId").value = value[0].PreferredName;
            }
             if(value[0].Zone){
             document.getElementById("TimeZoneId").value = value[0].Zone;
@@ -98,6 +104,27 @@
            }
             if(value[0].OfficePhoneNumber){
             document.getElementById("OfficePhoneNumberId").value = value[0].OfficePhoneNumber;
+           }
+            if(value[0].Language){
+            document.getElementById("LanguageId").value = value[0].Language;
+           }
+            if(value[0].AppearanceSettings){
+            document.getElementById("AppearanceSettingsId").value = value[0].AppearanceSettings;
+           }
+            if(value[0].DirectReportees){
+            document.getElementById("DirectReporteesId").value = value[0].DirectReportees;
+           }
+            if(value[0].WorkStatus){
+            document.getElementById("WorkStatusId").value = value[0].WorkStatus;
+           }
+            if(value[0].DirectReportees){
+            document.getElementById("DirectReporteesId").value = value[0].DirectReportees;
+           }
+            if(value[0].UserID){
+            document.getElementById("UserID").value = value[0].UserID;
+           }
+            if(value[0].EmployeeID){
+            document.getElementById("EmployeeID").value = value[0].EmployeeID;
            }
           }
     </script>
