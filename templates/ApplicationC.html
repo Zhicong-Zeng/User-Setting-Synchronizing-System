@@ -4,12 +4,12 @@
       <link rel="stylesheet" type="text/css" href="../static/style.css">
   </head>
   <body scroll="yes">
-    <form action = "http://127.0.0.1:5000/ApplicationA" method = "POST"
+    <form action = "http://127.0.0.1:5000/ApplicationC" method = "POST"
         enctype = "multipart/form-data">
 
           <div class="container">
               <div class="brand-logo"></div>
-              <div class="brand-title">Application A</div>
+              <div class="brand-title">Application C</div>
               <div class="inputs">
                   <input type = "file" name = "file" />
                     <button type="submit">Submit</button>
@@ -43,16 +43,13 @@
                     <label>Role</label>
                     <input type="text" id="RoleId"  disabled/>
 
-                    <label>Currency</label>
-                    <input type="text" id="CurrencyId"  disabled/>
-
                     <label>Cellphone</label>
                     <input type="text" id="CellphoneId"  disabled/>
 
                     <label>OfficePhoneNumberId</label>
                     <input type="text" id="OfficePhoneNumberId"  disabled/>
 
-                  <button type=button onClick="parent.location='http://127.0.0.1:5000/ApplicationA'">Refresh</button>
+                  <button type=button onClick="parent.location='http://127.0.0.1:5000/ApplicationC'">Refresh</button>
                </div>
           </div>
     </form>
@@ -63,28 +60,28 @@
 
           function setValue(value) {
           if(value[0].Name){
-            document.getElementById("NameId").value = value[0].Name;
+            document.getElementById("NameId").value = value[0].OtherName;
           }
           if(value[0].Avatar){
-            document.getElementById("AvatarId").value = value[0].Name;
+            document.getElementById("AvatarId").value = value[0].OtherName;
           }
           if(value[0].TimeZone){
            document.getElementById("TimeZoneId").value = value[0].TimeZone;
           }
           if(value[0].Comapny){
-            document.getElementById("CompanyId").value = value[0].Comapny;
+            document.getElementById("CompanyId").value = value[0].Workplace;
           }
           if(value[0].Currency){
             document.getElementById("CurrencyId").value = value[0].Currency;
           }
           if(value[0].Date){
-             document.getElementById("DTId").value = value[0].Date;
+             document.getElementById("DTId").value = value[0].DateTime;
           }
           if(value[0].Address){
            document.getElementById("AddressId").value = value[0].Address;
           }
           if(value[0].Email_Id){
-           document.getElementById("EmailId").value = value[0].Email_Id;
+           document.getElementById("EmailId").value = value[0].EmailID;
           }
           if(value[0].Language){
             document.getElementById("LanguageId").value = value[0].Language;
@@ -93,11 +90,11 @@
            document.getElementById("RoleId").value = value[0].Role;
           }
           if(value[0].CellPhone_Number){
-           document.getElementById("CellNoId").value = value[0].CellPhone_Number;
+           document.getElementById("CellNoId").value = value[0].CellPhoneNumber;
           }
           if(value[0].Office_Number){
-            document.getElementById("OfficePhoneNumberId").value = value[0].Office_Number;
-          }}
-
+            document.getElementById("OfficePhoneNumberId").value = value[0].OfficeNumber;
+          }
+          }
     </script>
 </html>
