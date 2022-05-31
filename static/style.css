@@ -28,7 +28,21 @@ body {
   background: #ecf0f3;
   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
 }
+.card {
+ position: relative;
+ width: 200px;
+ height: 200px;
+ border:1px solid black;
+}
 
+.element {
+ position: absolute;
+ top:-3px;
+ right:20px ;
+ width: 120px;
+ height: 50px;
+ border: 1px solid black;
+}
 .brand-title {
   margin-top: 10px;
   font-weight: 900;
