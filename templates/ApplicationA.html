@@ -63,18 +63,19 @@
           setValue(jsonfile);
 
           function setValue(value) {
-              document.getElementById("NameId").value = value[0].PreferredName;
-              document.getElementById("AvatarId").value = value[0].PreferredName;
-              document.getElementById("TimeZoneId").value = value[0].Zone;
-              document.getElementById("CompanyId").value = value[0].Workplace;
+              document.getElementById("NameId").value = value[0].Name;
+              document.getElementById("AvatarId").value = value[0].Name;
+              document.getElementById("TimeZoneId").value = value[0].TimeZone;
+              document.getElementById("CompanyId").value = value[0].Comapny;
               document.getElementById("CurrencyId").value = value[0].Currency;
-              document.getElementById("DTId").value = value[0].PreferredTime;
+              document.getElementById("DTId").value = value[0].Date;
               document.getElementById("AddressId").value = value[0].Address;
-              document.getElementById("EmailId").value = value[0].Email;
+              document.getElementById("EmailId").value = value[0].Email_Id;
               document.getElementById("LanguageId").value = value[0].Language;
               document.getElementById("RoleId").value = value[0].Role;
-              document.getElementById("CellNoId").value = value[0].CellNo;
-              document.getElementById("OfficePhoneNumberId").value = value[0].OfficePhoneNumber;
+              document.getElementById("CellNoId").value = value[0].CellPhone_Number;
+              document.getElementById("OfficePhoneNumberId").value = value[0].Office_Number;
+
           }
     </script>
 </html>
