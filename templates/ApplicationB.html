@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
+      <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <div class="container"></div>
-    <script>
-      const jsonfile = JSON.parse({{jsonfile|tojson}});
-      console.log(jsonfile);
-      document.querySelector(".container").innerHTML = JSON.stringify(jsonfile, null, 2);
-    </script>
+
     <form action = "http://127.0.0.1:5000/ApplicationB" method = "POST" 
     enctype = "multipart/form-data">
-    <input type = "file" name = "file" />
-    <input type = "submit"/>
-    </form>   
+
+
+      <div class="container">
+      <div class="brand-logo"></div>
+      <div class="brand-title">Application B</div>
+      <div class="inputs">
+         <input type = "file" name = "file" />
+     <button type="submit">Submit</button>
+        <label>Name</label>
+        <input type="text" id="NameId" placeholder="Enter text here"/>
+        <label>Avatar</label>
+        <input type="avatar" id="AvatarId" placeholder="Enter text here" />
+        <label>Company</label>
+        <input type="company" id="CompanyId"  placeholder="Enter Text here" />
+        <label>Currency</label>
+        <input type="company" id="CurrencyId"  placeholder="Enter Text here" />
+        <label>Date and Time</label>
+        <input type="datetime" id="DTId"  placeholder="Enter Date here" />
+        <label>Timezone</label>
+        <input type="timezone" id="TimeZoneId"  placeholder="Enter timezone here" />
+        <button type="submit">Refresh</button>
+    </div>
+      </div>
+    </form>
+
+
+      <script>
+      const jsonfile = JSON.parse({{jsonfile|tojson}});
+      setValue(jsonfile);
+
+      function setValue(value) {
+      document.getElementById("NameId").value = value[0].PreferredName;
+      document.getElementById("AvatarId").value = value[0].PreferredName;
+      document.getElementById("CompanyId").value = value[0].Workplace;
+      document.getElementById("CurrencyId").value = value[0].Currency;
+      document.getElementById("DTId").value = value[0].PreferredTime;
+      document.getElementById("TimeZoneId").value = value[0].Zone;
+    }
+    </script>
   </body>
 </html>
