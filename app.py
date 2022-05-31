@@ -26,27 +26,23 @@ def ApplicationC():
     
     if(json_obj.get("CommonSettingData")):
       common_setting_data = json_obj["CommonSettingData"]
-      file_path = os.path.relpath("Data/CommonSettingData.json")
+      file_path = os.path.relpath("Save_Copy/CommonSettingData.json")
       with open(file_path, 'w') as outfile:
         json.dump(common_setting_data, outfile)
       message += "Succeed change common data"
         
-    if(json_obj.get("ApplicationC")):
-      application_c = json_obj["ApplicationC"]
-      file_path = os.path.relpath("Data/ApplicationC.json")
-      with open(file_path, 'w') as outfile:
-        json.dump(application_c, outfile)
-      message += "Succeed change ApplicationC data"
+    file_path = os.path.relpath("Save_Copy/ApplicationC.json")
+    with open(file_path, 'w') as outfile:
+      json.dump(json_obj, outfile)
+    message += "Successfully updated ApplicationC data"
     
     message += "</p>"
+    readAppCIntoAppToCommonMapping()
     return message
   
   else:#Get method
     DataList.clear()
-    Common_file_path = os.path.relpath("Data/CommonSettingData.json")
-    with open(Common_file_path) as file:
-      DataList.append(json.load(file))
-    AppC_file_path = os.path.relpath("Data/ApplicationC.json")
+    AppC_file_path = os.path.relpath("Save_Copy/ApplicationC.json")
     with open(AppC_file_path) as file:
       DataList.append(json.load(file))
     return render_template('ApplicationC.html', title="page", jsonfile=json.dumps(DataList))
@@ -123,8 +119,23 @@ def readAppBIntoAppToCommonMapping():
             value = appB_dict[key]
             result = metadata_dict[appTocommon_dict["ApplicationB"][key]]
             updateApps("Save_Copy/ApplicationA.json", result[0], value)
-            #updateApps("Save_Copy/ApplicationC.json", result[2], value)
+            updateApps("Save_Copy/ApplicationC.json", result[2], value)
             updateApps("Save_Copy/CommonSettingData.json", appTocommon_dict["ApplicationB"][key], value)
+    print("Successfully changed the data")
+
+def readAppCIntoAppToCommonMapping():
+    appTocommon_dict = readAppTocommonMappingIntoDict();
+    metadata_dict = readJsonIntoMetadataMapping();
+    file_path = os.path.relpath("Data/ApplicationC.json")
+    with open(file_path) as file:
+        appC_dict = json.loads(file.read())
+    for key in appC_dict:
+        if (key in appTocommon_dict["ApplicationC"]):
+            value = appC_dict[key]
+            result = metadata_dict[appTocommon_dict["ApplicationC"][key]]
+            updateApps("Save_Copy/ApplicationA.json", result[0], value)
+            updateApps("Save_Copy/ApplicationB.json", result[1], value)
+            updateApps("Save_Copy/CommonSettingData.json", appTocommon_dict["ApplicationC"][key], value)
     print("Successfully changed the data")
 
 def updateApps(appPath, sourceKey, sourceValue):
