@@ -1,1 +1,38 @@
-{	"ApplicationA": {		"Name": "Name",		"TimeZone": "TimeZone",		"Address": "Address",		"Email Id": "Email id",		"Office Number": "Office Number",		"Currency": "Currency",		"Date": "Date and Time",		"Cellphone Number": "Cellphone Number",		"Company": "Company",		"Language": "Language"	},	"ApplicationB": {		"PreferredName": "Name",		"Zone": "TimeZone",		"Address": "Address",		"Email": "Email id",		"Office Phone Number": "Office Number",		"Currency": "Currency",		"PreferredTime": "Date and Time",		"CellNo.": "Cellphone Number",		"Workplace": "Company",		"Language": "Language"	},	"ApplicationC": {		"F_Name": "Name"	}}
+{
+	"ApplicationA": {
+		"Name": "Name",
+		"TimeZone": "TimeZone",
+		"Address": "Address",
+		"Email Id": "Email id",
+		"Office Number": "Office Number",
+		"Currency": "Currency",
+		"Date": "Date and Time",
+		"Cellphone Number": "Cellphone Number",
+		"Company": "Company",
+		"Language": "Language"
+	},
+	"ApplicationB": {
+		"PreferredName": "Name",
+		"Zone": "TimeZone",
+		"Address": "Address",
+		"Email": "Email id",
+		"Office Phone Number": "Office Number",
+		"Currency": "Currency",
+		"PreferredTime": "Date and Time",
+		"CellNo.": "Cellphone Number",
+		"Workplace": "Company",
+		"Language": "Language"
+	},
+	"ApplicationC": {
+		"OtherName": "Name",
+		"TimeZone": "TimeZone",
+		"Address": "Address",
+		"EmailID": "Email id",
+		"Office Number": "Office Number",
+		"Currency": "Currency",
+		"DateTime": "Date and Time",
+		"Cell Phone Number": "Cellphone Number",
+		"Workplace": "Company",
+		"Language": "Language"
+	}
+}
