@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="../static/style.css">
+  </head>
+  <body scroll="yes">
+    <form action = "http://127.0.0.1:5000/ApplicationA" method = "POST"
+        enctype = "multipart/form-data">
+
+
+          <div class="container" style="width: auto">
+              <div class="brand-title">Hello, User! Please choose your application type</div>
+          </div>
+        &nbsp;
+          <div class="container" style="width: auto">
+                  <div class="brand-logo"></div>
+                  <div class="brand-title">Application A</div>
+                  <div class="inputs">
+                      <button type=button onClick="parent.location='http://127.0.0.1:5000/ApplicationA'">Proceed to Application A</button>
+                  </div>
+              </div>
+              </br>
+          <div class="container" style="width: auto">
+                  <div class="brand-logo"></div>
+                  <div class="brand-title">Application B</div>
+                  <div class="inputs">
+                      <button type=button onClick="parent.location='http://127.0.0.1:5000/ApplicationB'">Proceed to Application B</button>
+                  </div>
+              </div>
+              </br>
+          <div class="container" style="width: auto">
+                  <div class="brand-logo"></div>
+                  <div class="brand-title">Application C</div>
+                  <div class="inputs">
+                      <button type=button onClick="parent.location='http://127.0.0.1:5000/ApplicationC'">Proceed to Application C</button>
+                  </div>
+              </div>
+          </div>
+    </form>
+  </body>
+</html>

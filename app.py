@@ -9,7 +9,8 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route("/")
 def root():
-  return "<p>Hello, User! Please choose your application type!</p>"
+    return render_template('Home.html', title="page")
+  #return "<p>Hello, User! Please choose your application type!</p>"
 
 DataList = []
 
