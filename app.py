@@ -121,6 +121,15 @@ def ApplicationC():
       DataList.append(json.load(file))
     return render_template('ApplicationC.html', title="page", jsonfile=json.dumps(DataList))
 
+@app.route('/Common',methods = ['GET'])
+def Common():
+  if request.method == 'GET':
+    DataList.clear()
+    Common_file = os.path.relpath("Save_Copy/CommonSettingData.json")
+    with open(Common_file) as file:
+      DataList.append(json.load(file))
+    return render_template('Common.html', title="page", jsonfile=json.dumps(DataList))
+
 
 def readAppIntoAppToCommonMapping(ApplcationName):
     appTocommon_dict = readAppTocommonMappingIntoDict()
