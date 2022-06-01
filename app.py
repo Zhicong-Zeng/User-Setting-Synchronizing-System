@@ -18,17 +18,16 @@ DataList = []
 @app.route('/ApplicationA',methods = ['POST', 'GET'])
 def ApplicationA():
   if request.method == 'POST':
+    if not request.files.get('file', None):
+      DataList.clear()
+      AppA_file_path = os.path.relpath("Save_Copy/ApplicationA.json")
+      with open(AppA_file_path) as file:
+        DataList.append(json.load(file))
+      return render_template('ApplicationA.html', title="page", jsonfile=json.dumps(DataList))
+    
     json_file = request.files['file'].read().decode("utf-8")
     json_obj = json.loads(json_file)
     message = "<p>"
-    
-    if(json_obj.get("CommonSettingData")):
-      common_setting_data = json_obj["CommonSettingData"]
-      file_path = os.path.relpath("Save_Copy/CommonSettingData.json")
-      with open(file_path, 'w') as outfile:
-        json.dump(common_setting_data, outfile)
-      message += "Succeed change common data"
-        
 
     file_path = os.path.relpath("Save_Copy/ApplicationA.json")
     with open(file_path, 'w') as outfile:
@@ -54,18 +53,17 @@ def ApplicationA():
 @app.route('/ApplicationB',methods = ['POST', 'GET'])
 def ApplicationB():
   if request.method == 'POST':
+    if not request.files.get('file', None):
+      DataList.clear()
+      AppB_file_path = os.path.relpath("Save_Copy/ApplicationB.json")
+      with open(AppB_file_path) as file:
+        DataList.append(json.load(file))
+      return render_template('ApplicationB.html', title="page", jsonfile=json.dumps(DataList))
+
     json_file = request.files['file'].read().decode("utf-8")
     json_obj = json.loads(json_file)
     message = "<p>"
     
-    if(json_obj.get("CommonSettingData")):
-      common_setting_data = json_obj["CommonSettingData"]
-      file_path = os.path.relpath("Save_Copy/CommonSettingData.json")
-      with open(file_path, 'w') as outfile:
-        json.dump(common_setting_data, outfile)
-      message += "Succeed change common data"
-        
-
     file_path = os.path.relpath("Save_Copy/ApplicationB.json")
     with open(file_path, 'w') as outfile:
       json.dump(json_obj, outfile)
@@ -90,16 +88,16 @@ def ApplicationB():
 @app.route('/ApplicationC',methods = ['POST', 'GET'])
 def ApplicationC():
   if request.method == 'POST':
+    if not request.files.get('file', None):
+      DataList.clear()
+      AppC_file_path = os.path.relpath("Save_Copy/ApplicationC.json")
+      with open(AppC_file_path) as file:
+        DataList.append(json.load(file))
+      return render_template('ApplicationC.html', title="page", jsonfile=json.dumps(DataList))
+
     json_file = request.files['file'].read().decode("utf-8")
     json_obj = json.loads(json_file)
     message = "<p>"
-    
-    if(json_obj.get("CommonSettingData")):
-      common_setting_data = json_obj["CommonSettingData"]
-      file_path = os.path.relpath("Save_Copy/CommonSettingData.json")
-      with open(file_path, 'w') as outfile:
-        json.dump(common_setting_data, outfile)
-      message += "Succeed change common data"
         
     file_path = os.path.relpath("Save_Copy/ApplicationC.json")
     with open(file_path, 'w') as outfile:
@@ -180,3 +178,72 @@ def updateApps(appPath, sourceKey, sourceValue):
     with open(appPath, 'w') as outfile:
         json.dump(application_dict, outfile)
 
+
+@app.route('/ApplicationA_api',methods = ['POST', 'GET'])
+def ApplicationA_api():
+  if request.method == 'POST':
+    json_file = request.files['file'].read().decode("utf-8")
+    json_obj = json.loads(json_file)
+    message = "<p>"
+  
+    file_path = os.path.relpath("Save_Copy/ApplicationA.json")
+    with open(file_path, 'w') as outfile:
+      json.dump(json_obj, outfile)
+    message += "Successfully updated ApplicationA data"
+    
+    message += "</p>"
+    readAppIntoAppToCommonMapping("ApplicationA")
+    return message
+  
+  else:#Get method
+    DataList.clear()
+    AppA_file_path = os.path.relpath("Save_Copy/ApplicationA.json")
+    with open(AppA_file_path) as file:
+      DataList.append(json.load(file))
+    return json.dumps(DataList)
+
+@app.route('/ApplicationB_api',methods = ['POST', 'GET'])
+def ApplicationB_api():
+  if request.method == 'POST':
+    json_file = request.files['file'].read().decode("utf-8")
+    json_obj = json.loads(json_file)
+    message = "<p>"
+  
+    file_path = os.path.relpath("Save_Copy/ApplicationB.json")
+    with open(file_path, 'w') as outfile:
+      json.dump(json_obj, outfile)
+    message += "Successfully updated ApplicationB data"
+    
+    message += "</p>"
+    readAppIntoAppToCommonMapping("ApplicationB")
+    return message
+  
+  else:#Get method
+    DataList.clear()
+    AppB_file_path = os.path.relpath("Save_Copy/ApplicationB.json")
+    with open(AppB_file_path) as file:
+      DataList.append(json.load(file))
+    return json.dumps(DataList)
+
+@app.route('/ApplicationC_api',methods = ['POST', 'GET'])
+def ApplicationC_api():
+  if request.method == 'POST':
+    json_file = request.files['file'].read().decode("utf-8")
+    json_obj = json.loads(json_file)
+    message = "<p>"
+  
+    file_path = os.path.relpath("Save_Copy/ApplicationC.json")
+    with open(file_path, 'w') as outfile:
+      json.dump(json_obj, outfile)
+    message += "Successfully updated ApplicationC data"
+    
+    message += "</p>"
+    readAppIntoAppToCommonMapping("ApplicationC")
+    return message
+  
+  else:#Get method
+    DataList.clear()
+    AppC_file_path = os.path.relpath("Save_Copy/ApplicationC.json")
+    with open(AppC_file_path) as file:
+      DataList.append(json.load(file))
+    return json.dumps(DataList)

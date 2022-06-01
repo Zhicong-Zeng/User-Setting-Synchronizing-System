@@ -1,12 +1,12 @@
 {
 	"Name": ["Name", "PreferredName", "OtherName"],
-	"Date and Time": ["Date", "PreferredTime", "DateTime"],
+	"DateAndTime": ["Date", "PreferredTime", "DateTime"],
 	"Currency": ["Currency", "Currency", "Currency"],
 	"TimeZone": ["TimeZone", "Zone", "TimeZone"],
 	"Company": ["Company", "Workplace","Workplace"],
-	"Cellphone Number": ["CellPhoneNumber", "CellNo","CellPhoneNumber"],
-	"Office Number": ["OfficeNumber", "OfficePhoneNumber", "OfficeNumber"],
+	"CellphoneNumber": ["CellPhoneNumber", "CellNo","CellPhoneNumber"],
+	"OfficeNumber": ["OfficeNumber", "OfficePhoneNumber", "OfficeNumber"],
 	"Address": ["Address", "Address", "Address"],
-	"Email id": ["EmailId", "Email", "EmailID"], 
+	"EmailId": ["EmailId", "Email", "EmailID"], 
 	"Language": ["Language","Language","Language"]
 }
