@@ -50,11 +50,8 @@
                     <label>Work Status</label>
                     <input type="text" id="WorkStatusId"  disabled/>
 
-                    <label>Direct Reportees</label>
-                    <input type="text" id="DirectReporteesId"  disabled/>
-
-                    <label>Appearance Settings</label>
-                    <input type="text" id="AppearanceSettingsId" disabled />
+                   <label>Employment</label>
+                    <input type="text" id="EmploymentId"  disabled/>
 
                     <label>User ID</label>
                     <input type="text" id="UserID"  disabled/>
@@ -105,12 +102,6 @@
           if(value[0].OfficeNumber){
             document.getElementById("OfficePhoneNumberId").value = value[0].OfficeNumber;
           }
-          if(value[0].AppearanceSettings){
-            document.getElementById("AppearanceSettingsId").value = value[0].AppearanceSettings;
-           }
-            if(value[0].DirectReportees){
-            document.getElementById("DirectReporteesId").value = value[0].DirectReportees;
-           }
             if(value[0].WorkStatus){
             document.getElementById("WorkStatusId").value = value[0].WorkStatus;
            }
@@ -119,6 +110,9 @@
            }
             if(value[0].EmployeeID){
             document.getElementById("EmployeeID").value = value[0].EmployeeID;
+           }
+           if(value[0].Employment){
+            document.getElementById("EmploymentId").value = value[0].Employment;
            }
           }
 
